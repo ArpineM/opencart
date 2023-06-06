@@ -2,7 +2,7 @@ package testCases;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
-import pageObjects.FoundProductPage;
+import pageObjects.ProductDisplaypage;
 import pageObjects.HomePage;
 import testBase.BaseClass;
 
@@ -16,7 +16,7 @@ public class TC_004_SearchTest extends BaseClass {
             hp.searchProduct();
             hp.searchClick();
 
-            FoundProductPage fp = new FoundProductPage(driver);
+            ProductDisplaypage fp = new ProductDisplaypage(driver);
             Boolean targetProduct = fp.isProductExists();
             Assert.assertEquals(targetProduct, true);
         }
