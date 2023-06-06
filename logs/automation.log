@@ -34,3 +34,7 @@
 11:11:33.418 [main] INFO  testCases.TC_003_LoginDataDrivenTest -  Finished TC_003_LoginDataDrivenTest
 11:11:33.421 [main] INFO  testCases.TC_003_LoginDataDrivenTest -  Starting TC_003_LoginDataDrivenTest 
 11:11:44.071 [main] INFO  testCases.TC_003_LoginDataDrivenTest -  Finished TC_003_LoginDataDrivenTest
+16:38:56.176 [main] INFO  testCases.TC_004_SearchTest - ****Searching for the product*****
+16:40:22.559 [main] INFO  testCases.TC_004_SearchTest - ****Searching for the product*****
+17:03:49.145 [main] INFO  testCases.TC_004_SearchTest - ****Searching for the product*****
+17:03:50.642 [main] INFO  testCases.TC_004_SearchTest - ***Finished Product Search****

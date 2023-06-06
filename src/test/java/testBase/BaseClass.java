@@ -18,6 +18,7 @@ import org.testng.annotations.Parameters;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+
 import java.time.Duration;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -27,7 +28,7 @@ public class BaseClass {
           public Logger logger;
           public ResourceBundle rb;
 
-          @BeforeClass(groups={"Master","Sanity","Regression"})
+          @BeforeClass
           @Parameters("browser")
           public void setup(String br) {
               rb=ResourceBundle.getBundle("config");
@@ -51,7 +52,7 @@ public class BaseClass {
               driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
           }
 
-          @AfterClass (groups={"Master","Sanity","Regression"})
+          @AfterClass
           public void tearDown() {
               driver.quit();
 
