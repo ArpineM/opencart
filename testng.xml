@@ -5,11 +5,12 @@
     <test name="Test">
         <parameter name="browser" value="chrome"/>
         <classes>
-        <class name="testCases.TC_001_AccountRegistrationTest"/>
-            <class name="testCases.TC_002_LoginTest"/>
-           <!--<class name="testCases.TC_003_LoginDataDrivenTest"/>-->
+        <!--<class name="testCases.TC_001_AccountRegistrationTest"/>
+           <class name="testCases.TC_002_LoginTest"/>
+           <class name="testCases.TC_003_LoginDataDrivenTest"/>
             <class name="testCases.TC_004_SearchTest"/>
-            <class name="testCases.TC_005_AddingProductToTheCartValidationTest"/>
+         <class name="testCases.TC_005_AddingProductToTheCartValidationTest"/>-->
+            <class name="testCases.TC_006_AddingToWishListFromHomePage"/>
         </classes>
 
     </test>

@@ -16,6 +16,9 @@ public class MyAccountPage extends BasePage {
     @FindBy(xpath = "//a[@class='list-group-item'][normalize-space()='Logout']")
     WebElement lnkLogout;
 
+    @FindBy(xpath = "//img[@title='Your Store']")
+    WebElement logoImage;
+
 
     public boolean isMyAccountPageExists()   // MyAccount Page heading display status
     {
@@ -28,6 +31,9 @@ public class MyAccountPage extends BasePage {
 
     public void clickLogout() {
         lnkLogout.click();
+    }
+    public void clickLogoImage(){
+        logoImage.click();
     }
 
 }

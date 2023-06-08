@@ -21,6 +21,16 @@ public class HomePage extends BasePage {
     WebElement searchField;
     @FindBy(xpath = "(//button[@class='btn btn-default btn-lg'])[1]")
     WebElement SearchBtn;
+    @FindBy(xpath = "//div[@id='content']//div[1]//div[1]//div[3]//button[2]//i[1]")
+    WebElement addToWishList;
+    @FindBy(xpath = "//a[@id='wishlist-total']")
+    WebElement wishList;
+
+    @FindBy(xpath = "a[class='btn btn-default']")
+    WebElement openCartbtn;
+
+    @FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+    WebElement SuccessMSG;
 
     public void clickMyAccount() {
         lnkMyAccount.click();
@@ -35,16 +45,42 @@ public class HomePage extends BasePage {
         lnkLogin.click();
     }
 
-    public void clearSearchField(){
+    public void clearSearchField() {
         searchField.clear();
     }
-    public void searchProduct(){
+
+    public void searchProduct() {
         searchField.sendKeys("iMac");
 
 
     }
-    public void searchClick(){
+
+    public void searchClick() {
         SearchBtn.click();
 
+    }
+
+    public void addingToWishList() {
+        addToWishList.click();
+    }
+
+    public void clickWishList() {
+        wishList.click();
+    }
+
+    public boolean openCartbtnisDisplayed() {
+        try {
+            return openCartbtn.isDisplayed();
+        } catch (Exception e) {
+            return (false);
+        }
+    }
+
+    public boolean productInWishListMsg(){
+        try {
+            return SuccessMSG.isDisplayed();
+        }catch(Exception e){
+            return (false);
+        }
     }
 }

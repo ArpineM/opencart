@@ -11,6 +11,8 @@ public class ShoppingCartPage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"content\"]/form/div/table/tbody/tr/td[2]/a")
     WebElement productInCart;
+    @FindBy(xpath = "a[class='btn btn-default']")
+    WebElement continueShopping;
 
     public boolean productIsInTheCart() {
         try {
@@ -19,8 +21,9 @@ public class ShoppingCartPage extends BasePage {
         catch(Exception e){
             return (false);
         }
-
-
+    }
+    public void clickContShopp(){
+        continueShopping.click();
     }
 
 
