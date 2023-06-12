@@ -29,7 +29,7 @@ public class TC_005_AddingProductToTheCartValidationTest extends BaseClass {
         try{
         ProductDisplaypage pd=new ProductDisplaypage(driver);
         pd.clickAddToCart();
-       Boolean targetmsg= pd.successMsgIsDisplayed();
+       Boolean targetmsg= pd.productIsInCartMsg();
        Assert.assertEquals(targetmsg,true);
        pd.clickCartBtn();
        pd.clickViewCart();

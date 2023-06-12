@@ -19,6 +19,12 @@ public class MyAccountPage extends BasePage {
     @FindBy(xpath = "//img[@title='Your Store']")
     WebElement logoImage;
 
+    @FindBy(xpath = "//input[@placeholder='Search']")
+    WebElement searchField;
+
+    @FindBy(xpath = "//button[@class='btn btn-default btn-lg']")
+    WebElement maccSearchbtn;
+
 
     public boolean isMyAccountPageExists()   // MyAccount Page heading display status
     {
@@ -34,6 +40,13 @@ public class MyAccountPage extends BasePage {
     }
     public void clickLogoImage(){
         logoImage.click();
+    }
+
+    public void searchProduct(){
+        searchField.sendKeys("iMac");
+    }
+    public void clickSearch(){
+        maccSearchbtn.click();
     }
 
 }
