@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.FieldDocument;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,6 +26,11 @@ public class MyAccountPage extends BasePage {
     @FindBy(xpath = "//button[@class='btn btn-default btn-lg']")
     WebElement maccSearchbtn;
 
+    @FindBy(xpath = "//span[normalize-space()='My Account']")
+    WebElement myAccountDropdown;
+    @FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Order History']")
+    WebElement orderHistoryFromDropDown;
+
 
     public boolean isMyAccountPageExists()   // MyAccount Page heading display status
     {
@@ -47,6 +53,12 @@ public class MyAccountPage extends BasePage {
     }
     public void clickSearch(){
         maccSearchbtn.click();
+    }
+    public void clickMyAccountDropDown(){
+        myAccountDropdown.click();
+    }
+    public void clickMyOrderHistoryFromDD(){
+        orderHistoryFromDropDown.click();
     }
 
 }

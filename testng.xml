@@ -10,8 +10,9 @@
            <class name="testCases.TC_003_LoginDataDrivenTest"/>
             <class name="testCases.TC_004_SearchTest"/>
          <class name="testCases.TC_005_AddingProductToTheCartValidationTest"/>
-            <class name="testCases.TC_006_AddingToWishListFromHomePage"/>-->
-            <class name="testCases.TC_007_BillingDetailsValidationCheckout"/>
+            <class name="testCases.TC_006_AddingToWishListFromHomePage"/>
+            <class name="testCases.TC_007_BillingDetailsValidationCheckout"/>-->
+            <class name="testCases.TC_008_OrderHistoryPageValidation"/>
         </classes>
 
     </test>
