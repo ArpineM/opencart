@@ -1,15 +1,15 @@
 package utilities;
 
-import java.io.IOException;
-
 import org.testng.annotations.DataProvider;
+
+import java.io.IOException;
 
 public class DataProviders {
 
     //DataProvider 1
 
     @DataProvider(name="LoginData")
-    public String [][] getData() throws IOException
+    public String[][] getData() throws IOException
     {
         String path=".\\testData\\OpencartLoginData.xlsx";//taking xl file from testData
 

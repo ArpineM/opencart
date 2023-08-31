@@ -1,42 +1,33 @@
 package pageObjects;
-
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pageObjects.BasePage;
+import org.openqa.selenium.WebDriver;
 
 public class AccountRegistrationPage extends BasePage{
-   public AccountRegistrationPage(WebDriver driver){
+   public AccountRegistrationPage (WebDriver driver) {
        super(driver);
    }
-   //elements
-    @FindBy(name="firstname")
+   @FindBy(name = "firstname")
     WebElement txtFirstname;
-
    @FindBy(name="lastname")
     WebElement txtLastname;
-
    @FindBy(name="email")
-    WebElement txtEmail;
+   WebElement txtEmail;
    @FindBy(name="telephone")
     WebElement txtTelephone;
-
    @FindBy(name="password")
     WebElement txtPassword;
-
-   @FindBy(xpath = "//input[@id='input-confirm']")
-    WebElement txtConfirmPassword;
-
+   @FindBy(name="confirm")
+    WebElement txtPasswordConfirm;
    @FindBy(name="agree")
-    WebElement chkPolicy;
-
-   @FindBy(xpath="//input[@value='Continue']")
+    WebElement checkPolicy;
+   @FindBy(xpath = "//input[@value='Continue']")
     WebElement btnContinue;
-
    @FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
-   WebElement msgConfirmation;
+    WebElement confMessage;
 
-   //actions
-    public void setFirstName(String fname){
+   public void setFirstName(String fname){
        txtFirstname.sendKeys(fname);
    }
    public void setLastName(String lname){
@@ -45,33 +36,29 @@ public class AccountRegistrationPage extends BasePage{
    public void setEmail(String email){
        txtEmail.sendKeys(email);
    }
-   public void setTelephone(String tel){
-       txtTelephone.sendKeys(tel);
+   public void setTelephone(String telephone){
+       txtTelephone.sendKeys(telephone);
    }
-   public void setPassword(String password){
-       txtPassword.sendKeys(password);
+   public void setPassword(String pwd){
+       txtPassword.sendKeys(pwd);
    }
-   public void setConfirmPassword(String password){
-       txtConfirmPassword.sendKeys(password);
+   public void setConfirmPassword(String pwd2){
+       txtPasswordConfirm.sendKeys(pwd2);
    }
    public void setPrivacyPolicy(){
-       chkPolicy.click();
+       checkPolicy.click();
    }
-   public void  clickContinue(){
+   public void clickContinue(){
        btnContinue.click();
    }
-    public String getConfirmationMsg(){
-        try {
-            return (msgConfirmation.getText());
-        }
-        catch (Exception e){
-            return( e.getMessage());
-        }
-    }
+   public String getConfirmMsg(){
+       try{
+       return confMessage.getText();
+   }
+       catch(Exception e){
+           return(e.getMessage());
+       }
 
-
-
-
-
+       }
 
 }
